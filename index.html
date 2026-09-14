@@ -140,12 +140,12 @@
             margin-bottom: 2.5rem;
             overflow: hidden;
             display: grid;
-            grid-template-columns: 1.1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 0;
         }
 
         .featured-content {
-            padding: 2rem;
+            padding: 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -166,8 +166,18 @@
         }
 
         .featured-content h3 {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             margin: 0 0 0.25rem 0;
+        }
+
+        .featured-content h4 {
+            font-size: 1.15rem;
+            margin: 1.5rem 0 0.5rem 0;
+            color: var(--primary-color);
+        }
+
+        .featured-content p {
+            margin: 0.5rem 0;
         }
 
         .featured-video {
@@ -175,23 +185,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 260px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
         }
 
         .featured-video video {
             width: 100%;
             height: 100%;
-            min-height: 260px;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
         }
 
         @media(max-width: 768px) {
-            .featured-card {
-                grid-template-columns: 1fr;
-            }
-            .featured-video {
-                order: -1;
+            .featured-content {
+                padding: 1.5rem;
             }
         }
 
@@ -301,23 +308,40 @@
 
         <!-- FEATURED PROJECT -->
         <div class="featured-card">
+            <div class="featured-video">
+                <!-- Place your video file at assets/videos/gt-movies-demo.mp4 -->
+                <video controls playsinline>
+                    <source src="assets/videos/gt-movies-demo.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="featured-content">
                 <span class="featured-badge">Featured Project</span>
                 <h3>GT Movies Store</h3>
                 <span class="tech-stack">Python, Django, SQLite</span>
-                <p>A full-stack movie store web application built chapter-by-chapter following <em>Django 5 for the Impatient</em>, covering the framework end-to-end from models to deployment.</p>
+
+                <p>GT Movies Store is an interactive web application that allows for the browsing, reviewing, and buying of movies. The application addresses 21 distinct user stories through the following features:</p>
+
+                <h4>Core Features</h4>
                 <ul>
-                    <li>• Designed the SQLite database schema and Django models for movies, categories, and orders.</li>
-                    <li>• Built Django views, URL routing, and templates to render a dynamic storefront.</li>
-                    <li>• Implemented the Django admin panel for managing inventory and content.</li>
-                    <li>• Added user authentication and session handling for a personalized shopping experience.</li>
+                    <li>• An <strong>About</strong> page offering information about GT Movies Store.</li>
+                    <li>• A <strong>Sign Up / Login</strong> system so users can register and manage accounts.</li>
+                    <li>• A <strong>Movies</strong> page for browsing the catalog and searching for specific titles, with each movie clickable for more details and pricing.</li>
+                    <li>• A <strong>Shopping Cart</strong> page to view added movies and save items to purchase later.</li>
+                    <li>• An <strong>Orders</strong> page to track previous orders and view invoices.</li>
                 </ul>
-            </div>
-            <div class="featured-video">
-                <!-- Place your video file at assets/videos/gt-movies-demo.mp4 -->
-                <video autoplay muted loop playsinline>
-                    <source src="assets/videos/gt-movies-demo.mp4" type="video/mp4">
-                </video>
+
+                <h4>Reviews System</h4>
+                <ul>
+                    <li>• Users can post reviews visible to everyone.</li>
+                    <li>• Users can edit or delete their own reviews.</li>
+                    <li>• Users can report inappropriate or offensive reviews from others for removal.</li>
+                </ul>
+
+                <h4>Admin Tools</h4>
+                <p>Administrators have access to an admin page for adding, editing, and removing users, movies, reviews, and orders. GT Movies Store is fully launched and accessible to anyone with a web browser and an internet connection.</p>
+
+                <h4>Development Process</h4>
+                <p>The app was built using Django's MVT (Model-View-Template) framework. I kept video recordings throughout as a logbook of project progress, and relied heavily on <em>Django 5 for the Impatient</em> — applying each lesson while reading, then testing and debugging the corresponding module afterward. When I ran into issues, I also checked the Ed Discussion board for my CS 2340 (Objects and Design) course to see if classmates had faced similar roadblocks.</p>
             </div>
         </div>
 

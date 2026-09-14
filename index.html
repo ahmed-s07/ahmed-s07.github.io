@@ -14,7 +14,7 @@
             --header-bg: #003057; /* GT Navy */
             --header-text: #ffffff;
         }
- 
+
         /* DARK MODE VARIABLES */
         .dark-mode {
             --text-color: #f4f4f4;
@@ -22,7 +22,7 @@
             --card-bg: #1e1e1e;
             --header-bg: #000000;
         }
- 
+
         /* GLOBAL STYLES */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,10 +33,10 @@
             color: var(--text-color);
             transition: background-color 0.3s, color 0.3s;
         }
- 
+
         a { text-decoration: none; color: inherit; }
         ul { list-style-type: none; padding: 0; }
- 
+
         /* HEADER & NAV */
         header {
             background-color: var(--header-bg);
@@ -46,7 +46,7 @@
             top: 0;
             z-index: 1000;
         }
- 
+
         .container {
             width: 90%;
             max-width: 1100px;
@@ -54,22 +54,22 @@
             overflow: hidden;
             padding: 0 20px;
         }
- 
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
- 
+
         nav h1 { font-size: 1.5rem; margin: 0; }
- 
+
         nav ul {
             display: flex;
             gap: 20px;
         }
- 
+
         nav a:hover { color: var(--primary-color); }
- 
+
         /* HERO SECTION */
         #hero {
             height: 80vh;
@@ -79,11 +79,11 @@
             align-items: flex-start;
             padding-bottom: 2rem;
         }
- 
+
         #hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
         #hero h2 { font-size: 2rem; font-weight: 300; margin-top: 0; }
         #hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
- 
+
         .btn {
             display: inline-block;
             background: var(--primary-color);
@@ -93,10 +93,10 @@
             transition: opacity 0.3s;
         }
         .btn:hover { opacity: 0.8; }
- 
+
         /* SECTIONS */
         section { padding: 3rem 0; }
- 
+
         h2.section-title {
             text-align: center;
             margin-bottom: 2rem;
@@ -104,16 +104,16 @@
             border-bottom: 2px solid var(--primary-color);
             display: inline-block;
         }
- 
+
         .section-center { text-align: center; }
- 
+
         /* CARDS (Projects & Experience) */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
- 
+
         .card {
             background: var(--card-bg);
             padding: 1.5rem;
@@ -121,7 +121,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
- 
+
         .card:hover { transform: translateY(-5px); }
         .card h3 { margin-top: 0; }
         .tech-stack {
@@ -131,7 +131,7 @@
             margin-bottom: 1rem;
             display: block;
         }
- 
+
         /* FEATURED PROJECT CARD */
         .featured-card {
             background: var(--card-bg);
@@ -143,14 +143,14 @@
             grid-template-columns: 1.1fr 1fr;
             gap: 0;
         }
- 
+
         .featured-content {
             padding: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
- 
+
         .featured-badge {
             display: inline-block;
             background: var(--primary-color);
@@ -164,12 +164,12 @@
             margin-bottom: 0.75rem;
             width: fit-content;
         }
- 
+
         .featured-content h3 {
             font-size: 1.8rem;
             margin: 0 0 0.25rem 0;
         }
- 
+
         .featured-video {
             background: #000;
             display: flex;
@@ -177,15 +177,15 @@
             justify-content: center;
             min-height: 260px;
         }
- 
-        .featured-video iframe {
+
+        .featured-video video {
             width: 100%;
             height: 100%;
             min-height: 260px;
-            border: none;
+            object-fit: cover;
             display: block;
         }
- 
+
         @media(max-width: 768px) {
             .featured-card {
                 grid-template-columns: 1fr;
@@ -194,7 +194,7 @@
                 order: -1;
             }
         }
- 
+
         /* SKILLS LIST */
         .skills-grid {
             display: flex;
@@ -209,7 +209,7 @@
             border-radius: 20px;
             font-size: 0.9rem;
         }
- 
+
         /* FOOTER */
         footer {
             background: var(--header-bg);
@@ -218,7 +218,7 @@
             padding: 2rem 0;
             margin-top: 2rem;
         }
- 
+
         /* TOGGLE BUTTON */
         #theme-toggle {
             background: none;
@@ -229,7 +229,7 @@
             border-radius: 5px;
             margin-left: 20px;
         }
- 
+
         /* RESPONSIVE */
         @media(max-width: 768px) {
             #hero h1 { font-size: 2.5rem; }
@@ -238,7 +238,7 @@
     </style>
 </head>
 <body>
- 
+
     <header>
         <div class="container">
             <nav>
@@ -255,7 +255,7 @@
             </nav>
         </div>
     </header>
- 
+
     <section id="hero" class="container">
         <h1>Hi, I'm Ahmed.</h1>
         <h2>Computer Science Student at Georgia Tech</h2>
@@ -265,7 +265,7 @@
             <a href="https://github.com/ahmed-s07" target="_blank" class="btn" style="background-color: #333;">GitHub</a>
         </div>
     </section>
- 
+
     <section id="about" class="container">
         <div class="section-center">
             <h2 class="section-title">About Me</h2>
@@ -293,12 +293,12 @@
             </div>
         </div>
     </section>
- 
+
     <section id="projects" class="container">
         <div class="section-center">
             <h2 class="section-title">Projects</h2>
         </div>
- 
+
         <!-- FEATURED PROJECT -->
         <div class="featured-card">
             <div class="featured-content">
@@ -314,13 +314,15 @@
                 </ul>
             </div>
             <div class="featured-video">
-                <!-- Replace VIDEO_ID with your YouTube video ID once uploaded -->
-                <iframe src="https://www.youtube.com/embed/https://youtu.be/yIyhZ7_-5Hg" title="GT Movies Store Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Place your video file at assets/videos/gt-movies-demo.mp4 -->
+                <video autoplay muted loop playsinline>
+                    <source src="assets/videos/gt-movies-demo.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
- 
+
         <div class="grid-container">
- 
+
             <div class="card">
                 <h3>3D Software Renderer</h3>
                 <span class="tech-stack">Python, Pygame, NumPy</span>
@@ -331,7 +333,7 @@
                     <li>• Currently optimizing render loops for solid polygon filling and flat shading.</li>
                 </ul>
             </div>
- 
+
             <div class="card">
                 <h3>ConnexUs</h3>
                 <span class="tech-stack">Python, JavaScript, Django</span>
@@ -342,7 +344,7 @@
                     <li>• Collaborated with a 4-person team to ship core features in under 36 hours.</li>
                 </ul>
             </div>
- 
+
             <div class="card">
                 <h3>Personal Portfolio</h3>
                 <span class="tech-stack">HTML, CSS, JavaScript</span>
@@ -350,7 +352,7 @@
             </div>
         </div>
     </section>
- 
+
     <section id="experience" class="container">
         <div class="section-center">
             <h2 class="section-title">Experience</h2>
@@ -368,7 +370,7 @@
             </div>
         </div>
     </section>
- 
+
     <footer id="contact">
         <div class="container">
             <h2>Let's Connect</h2>
@@ -380,11 +382,11 @@
             <p>&copy; 2026 Ahmed Sherif. Built from scratch.</p>
         </div>
     </footer>
- 
+
     <script>
         const toggleButton = document.getElementById('theme-toggle');
         const body = document.body;
- 
+
         toggleButton.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             
@@ -396,6 +398,6 @@
             }
         });
     </script>
- 
+
 </body>
 </html>
